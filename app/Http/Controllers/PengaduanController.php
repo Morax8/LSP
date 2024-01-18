@@ -16,10 +16,6 @@ class PengaduanController extends Controller
     {
         return view('form');
     }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -40,21 +36,8 @@ class PengaduanController extends Controller
         return redirect('/histori');
     }
 
-    public function update(Request $request, pengaduan $pengaduan)
-    {
-        $request->validate([
-            'active' => 'boolean',
-        ]);
 
-        $pengaduan->update(['active' => $request->input('active')]);
-
-        return redirect('/histori');
-    }
-
-
-    /**
-     * Display the specified resource.
-     */
+    //display histori
     public function show(pengaduan $pengaduan, Request $request)
     {
         $search = $request->input('search');
@@ -96,21 +79,16 @@ class PengaduanController extends Controller
     //reply admin
     public function reply(Request $request, $pengaduanId)
     {
-        // Validate the request data as needed
         $request->validate([
             'isi' => 'required',
         ]);
 
         $pengaduan = Pengaduan::findOrFail($pengaduanId);
-
-        // Create a reply
         $tanggapan = new Tanggapan([
             'isi' => $request->input('isi'),
         ]);
 
         $pengaduan->tanggapan()->save($tanggapan);
-
-        // Update the status to 1
         $pengaduan->update(['active' => 1]);
 
         return redirect('/pengaduan');
