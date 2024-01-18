@@ -67,9 +67,7 @@ class PengaduanController extends Controller
     }
 
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+    //dislay pengaduan
     public function showCMS(pengaduan $pengaduan, Request $request)
     {
         $search = $request->input('search');
@@ -94,6 +92,8 @@ class PengaduanController extends Controller
         return view('admin.dashboard', compact('pengaduan', 'active'));
     }
 
+
+    //reply admin
     public function reply(Request $request, $pengaduanId)
     {
         // Validate the request data as needed
@@ -123,6 +123,7 @@ class PengaduanController extends Controller
         return view('admin.tanggapan', compact('tanggapan', 'active'));
     }
 
+    //hapus
     public function tanggapanDestroy($id)
     {
         Tanggapan::findorFail($id)->delete();
