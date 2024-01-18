@@ -1,0 +1,97 @@
+body,
+html {
+    height: 100%;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #7a7c82;
+    margin-top: 25px;
+}
+
+@media (min-width: 768px) {
+    body {
+        margin-top: 65px;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Oxygen", sans-serif;
+    margin-top: 0px;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 55px;
+}
+
+h2 {
+    font-size: 22px;
+    line-height: 40px;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 20px;
+}
+
+h4 {
+    font-size: 17px;
+    line-height: 14px;
+}
+
+h5 {
+    font-size: 16px;
+    line-height: 12px;
+}
+
+h6 {
+    font-size: 14px;
+    line-height: 10px;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    line-height: 25px;
+    color: #7a7c82;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+/* FILEPATH: /d:/Laravel/LSP/resources/css/app.css */
+
+.navbar {
+    background-color: #f8f9fa;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-nav li {
+    margin-right: 10px;
+}
+
+.navbar-nav li a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px;
+}
+
+.navbar-nav li a:hover {
+    color: #007bff;
+}
