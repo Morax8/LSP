@@ -101,6 +101,12 @@
                                 <p>Tabel Tanggapan</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="fa-solid fa-image nav-icon"></i>
+                                <p>Gallery</p>
+                            </a>
+                        </li>
                         <!-- Log Out -->
                         <li class="nav-item">
                             <a href="/logout" class="nav-link">

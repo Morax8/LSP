@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light" style="margin-left: 20px; margin-right: 20px;">
+<nav class="navbar navbar-expand-lg" style="margin-left: 20px; margin-right: 20px;">
     <div class="container-fluid">
         <a class="navbar-brand" href="/">Navbar</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -16,6 +16,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/histori">Histori Aspirasi</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/galeri">Galeri</a>
+                </li>
+
                 <li class="nav-item">
                     <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i></a>
                 </li>
