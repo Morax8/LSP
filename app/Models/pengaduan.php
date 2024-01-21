@@ -20,6 +20,7 @@ class pengaduan extends Model
         'alamat',
         'tanggal',
         'isi',
+        'gambar',
         'active',
     ];
     public function scopeFilter($query, array $filters)
