@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('alamat');
             $table->date('tanggal');
             $table->longText('isi');
+            $table->string('gambar');
             $table->boolean('active')->default(false);
             $table->timestamps();
         });
