@@ -4,12 +4,17 @@
 @section('container')
 
 <div class="container">
-    <form action="/histori" method="GET">
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Search" name="search" value="{{ request('search') }}">
-            <button class="btn btn-dark" type="submit">Search</button>
+    <div class="row">
+        <div class="col-md-3">
+            <form action="/histori" method="GET">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search" name="search"
+                        value="{{ request('search') }}">
+                    <button class="btn btn-dark" type="submit">Search Menggunakan ID</button>
+                </div>
+            </form>
         </div>
-    </form>
+    </div>
 
     @if ($pengaduan->count())
     <div class="row">
@@ -38,6 +43,11 @@
                         </p>
                     </div>
                     <hr class="hr-nama">
+                    <div class="isi-laporan">
+                        <p class="text-justify">
+                            <img src="{{ asset('images/pengaduan/' .$item->gambar ) }}" alt="" class="img-thumbnail">
+                        </p>
+                    </div>
                     <div class="isi-laporan">
                         <p class="text-justify">
                             {{ $item->isi }}
