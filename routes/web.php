@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\PengaduanController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,7 @@ Route::get('/', function () {
 //login
 Route::middleware(['guest'])->group(function () {
     Route::get('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/login', [AuthController::class, 'authenticated']);
 });
 Route::get('/logout', [AuthController::class, 'logout']);
 //dashboard
@@ -38,3 +40,7 @@ Route::get('/form', [PengaduanController::class, 'index']);
 Route::post('/form/store', 'App\Http\Controllers\PengaduanController@store')->name('form.store');
 //history
 Route::get('/histori', [PengaduanController::class, 'show']);
+//galery
+Route::get('/galeri', [GalleryController::class, 'index']);
+Route::get('/galericms', [GalleryController::class, 'show']);
+Route::post('/galericms/store', 'App\Http\Controllers\GalleryController@store')->name('galericms.store');
