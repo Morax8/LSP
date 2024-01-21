@@ -4,6 +4,48 @@
 @section('content')
 
 <div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <form action="/pengaduan" method="GET">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search" name="search"
+                        value="{{ request('search') }}">
+                    <button class="btn btn-dark" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-4">
+            <form action="/pengaduan" method="GET">
+                <div class="input-group">
+                    <div class="input-group-addon"><span class="glyphicon glyphicon-random"></span></div>
+                    <select class="form-control" name="tujuan_id">
+                        <option>Pilih</option>
+                        <option value="1">Pelayanan Pendaftaran Penduduk</option>
+                        <option value="2">Pelayanan Pencatatan Sipil</option>
+                        <option value="3">Pengelolaan Informasi Administrasi Kependudukan</option>
+                        <option value="4">Pemanfaatan Data Dan Inovasi Pelayanan</option>
+                    </select>
+                    <button class="btn btn-dark" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-3">
+            <form action="/pengaduan" method="GET">
+                <div class="input-group">
+                    <div class="input-group-addon"><span class="glyphicon glyphicon-random"></span></div>
+                    <select class="form-control" name="active">
+                        <option>Pilih</option>
+                        <option value="0">Belum Ditanggapi</option>
+                        <option value="1">Sudah Ditanggapi</option>
+                    </select>
+                    <button class="btn btn-dark" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div class="table-responsive">
         <table class="table table-bordered table-hover table-striped">
             <thead>
@@ -44,4 +86,5 @@
         </table>
     </div>
 </div>
+
 @endsection
