@@ -9,6 +9,10 @@ class Gallery extends Model
 {
     use HasFactory;
 
+    protected $casts = [
+        'active' => 'boolean',
+    ];
+
     protected $fillable = [
         'nama',
         'gambar',
