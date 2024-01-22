@@ -44,3 +44,5 @@ Route::get('/histori', [PengaduanController::class, 'show']);
 Route::get('/galeri', [GalleryController::class, 'index']);
 Route::get('/galericms', [GalleryController::class, 'show']);
 Route::post('/galericms/store', 'App\Http\Controllers\GalleryController@store')->name('galericms.store');
+Route::put('/galericms/update/{id}', 'App\Http\Controllers\GalleryController@update')->name('galericms.update');
+Route::delete('/galericms/delete/{id}', 'App\Http\Controllers\GalleryController@destroy')->name('galericms.destroy');
