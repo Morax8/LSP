@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg" style="margin-left: 20px; margin-right: 20px;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">Navbar</a>
+        <a class="navbar-brand" href="/">Web Pengaduan Masyarakat</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -21,7 +21,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/login"><i class="fa-solid fa-right-to-bracket"></i></a>
+                    <a class="nav-link" href="/login"><i class="fa-solid fa-pen-to-square"></i></a>
                 </li>
             </ul>
         </div>

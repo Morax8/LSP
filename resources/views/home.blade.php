@@ -17,13 +17,30 @@
     </div>
     <div class="intro-text text-center">
         <div class="intro-lead-in">Formulir Aspirasi </div>
-        <div class="intro-heading">Warga RT 03</div>
+        <div class="intro-heading">Masyarakat </div>
     </div>
 
 </div>
 <div class="container">
-    <h1>Welcome to our landing page!</h1>
-    <p>This is a basic landing page with a navbar.</p>
+    <h1 class="text-center">Selamat Datang di Webstie Pengaduan Masyarakat</h1>
+    <div class="row text-center mt-4 mb-5">
+        <div class="col-md-4">
+            <i class="fa-solid fa-pencil"></i>
+            <label>Website ini dibuat untuk memudahkan masyarakat dalam menyampaikan aspirasi kepada pemerintah
+                setempat</label>
+        </div>
+        <div class="col-md-4">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <label>Website ini juga dapat digunakan untuk melihat histori aspirasi yang telah disampaikan oleh
+                masyarakat
+            </label>
+        </div>
+        <div class="col-md-4">
+            <i class="fa-solid fa-images"></i>
+            <label>Website ini juga dapat digunakan untuk melihat galeri foto yang telah disediakan oleh pemerintah
+                setempat</label>
+        </div>
+    </div>
 </div>
 
 <style>
