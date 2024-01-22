@@ -8,7 +8,8 @@
             <div class="card-body w-90 shadow p-3 mb-5 bg-body rounded ">
                 <h3 class="text-center ms-5 me-5">Formulir Pengaduan Masyarakat </h3>
                 <hr />
-                <form class="form-horizontal" role="form" method="post" action="{{ route('form.store') }}">
+                <form class="form-horizontal" role="form" method="post" action="{{ route('form.store') }}"
+                    enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="nomor" class="col-sm-3 control-label">Nomor Pengaduan</label>
