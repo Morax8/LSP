@@ -73,7 +73,7 @@
                             alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="#" class="d-block">Admin</a>
+                        <a href="/dashboard" class="d-block">{{ Auth::user()->name }}</a>
                     </div>
                 </div>
 
@@ -82,6 +82,14 @@
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
+                        <li class="nav-item">
+                            <a href="/" target="_blank" class="nav-link">
+                                <i class="fas fa-external-link-alt nav-icon"></i>
+                                <p>
+                                    Lihat Website
+                                </p>
+                            </a>
+                        </li>
 
                         <li class="nav-item">
                             <a href="/dashboard" class="nav-link {{ ($active === 'dashboard') ? 'active' : '' }}">
