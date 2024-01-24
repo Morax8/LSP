@@ -1,5 +1,5 @@
 @extends('layout.main')
-@section('title', 'Formulir Aspirasi')
+@section('title', 'Pelayanan Pengaduan Masyarakat')
 
 @section('container')
 
@@ -48,25 +48,20 @@
         display: none;
     }
 
-    /* Position the carousel container */
     #hero-carousel {
         position: relative;
     }
 
-    /* Ensure the carousel images cover the entire container */
     .hero-header {
         background-size: cover;
         background-position: center;
         height: 75vh;
-        /* Adjust the height as needed */
     }
 
-    /* Style the container for carousel and text */
     .carousel-container {
         position: relative;
     }
 
-    /* Position the intro-text on top of the carousel images */
     .intro-text {
         position: absolute;
         top: 50%;
@@ -76,7 +71,6 @@
         width: 100%;
     }
 
-    /* Optional: Add padding or margin to adjust the text position */
     .intro-heading {
         margin-bottom: 20px;
     }
@@ -88,7 +82,6 @@
         line-height: 40px;
         margin-bottom: 25px;
         color: #fff;
-
     }
 
     .intro-text .intro-heading {
