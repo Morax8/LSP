@@ -31,9 +31,6 @@ class DatabaseSeeder extends Seeder
             'name' => 'Pemanfaatan Data Dan Inovasi Pelayanan'
         ]);
 
-        // pengaduan::factory(6)->create();
-        // Tanggapan::factory(6)->create();
-
         User::create([
             'name' => 'Admin',
             'email' => 'admin@gmail.com',
