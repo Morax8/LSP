@@ -23,8 +23,6 @@ class GalleryController extends Controller
             'active' => 'boolean',
         ]);
 
-
-
         $input = $request->all();
 
         if ($image = $request->file('gambar')) {

@@ -14,17 +14,16 @@ class Tanggapan extends Model
         'tanggal',
         'isi',
     ];
+    public function pengaduan()
+    {
+        return $this->belongsTo(Pengaduan::class);
+    }
     public static function boot()
     {
         parent::boot();
 
-        // Set the date attribute to the current date when creating a new Tanggapan
         static::creating(function ($tanggapan) {
             $tanggapan->tanggal = now();
         });
-    }
-    public function pengaduan()
-    {
-        return $this->belongsTo(Pengaduan::class);
     }
 }

@@ -14,8 +14,8 @@ class PengaduanController extends Controller
      */
     public function index()
     {
-        $lastPengaduan = Pengaduan::latest()->first(); // Retrieve the last record
-        $nextId = $lastPengaduan ? $lastPengaduan->id + 1 : 1; // Increment the ID by 1 (or start from 1 if no records exist)
+        $lastPengaduan = Pengaduan::latest()->first();
+        $nextId = $lastPengaduan ? $lastPengaduan->id + 1 : 1;
 
         return view('form', ['nextId' => $nextId]);
     }
@@ -33,18 +33,15 @@ class PengaduanController extends Controller
             'active' => 'boolean',
         ]);
 
-
         $input = $request->all();
 
-        if ($image = $request->file('gambar')) { // Use 'gambar' instead of 'image' for the file field
-            $desiredFileName = $request->input('name'); // Change to 'name' field
+        if ($image = $request->file('gambar')) {
+            $desiredFileName = $request->input('name');
             $imageName = $desiredFileName . now()->format('Y-m-d') . '.' . $image->getClientOriginalExtension();
             $destinationPath = public_path('images/pengaduan');
             $image->move($destinationPath, $imageName);
-            $input['gambar'] = $imageName; // Change to 'gambar' field
+            $input['gambar'] = $imageName;
         }
-
-
         $input['active'] = 0;
 
         pengaduan::create($input);
@@ -132,16 +129,10 @@ class PengaduanController extends Controller
     //hapus
     public function tanggapanDestroy($id)
     {
-        // Find the tanggapan
+
         $tanggapan = Tanggapan::findOrFail($id);
-
-        // Find the associated pengaduan
         $pengaduan = $tanggapan->pengaduan;
-
-        // Update the active column in the pengaduan to 0
         $pengaduan->update(['active' => 0]);
-
-        // Delete the tanggapan
         $tanggapan->delete();
 
         return redirect('/tanggapan');
