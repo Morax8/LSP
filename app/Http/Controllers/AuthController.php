@@ -12,16 +12,12 @@ class AuthController extends Controller
     {
         return view('auth.login');
     }
-
-
     public function authenticated(Request $request)
     {
         $request->validate([
             'email' => 'required|email',
             'password' => 'required'
         ]);
-
-
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {

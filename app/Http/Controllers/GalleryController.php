@@ -13,6 +13,12 @@ class GalleryController extends Controller
         $active = 'galeri';
         return view('galeri', compact('active', 'galeri'));
     }
+    public function show(Gallery $gallery)
+    {
+        $galeri = Gallery::all();
+        $active = 'galeri';
+        return view('admin.galericms', compact('galeri', 'active'));
+    }
 
     public function store(Request $request)
     {
@@ -39,12 +45,6 @@ class GalleryController extends Controller
     }
 
     //display cms
-    public function show(Gallery $gallery)
-    {
-        $galeri = Gallery::all();
-        $active = 'galeri';
-        return view('admin.galericms', compact('galeri', 'active'));
-    }
     public function update(Request $request, Gallery $gallery, $id)
     {
         $request->validate([
@@ -52,9 +52,6 @@ class GalleryController extends Controller
             'gambar' => 'nullable|image',
             'text' => 'required',
         ]);
-
-        // dd($request->all());
-
         $gallery = Gallery::find($id);
 
         if ($image = $request->file('gambar')) {
