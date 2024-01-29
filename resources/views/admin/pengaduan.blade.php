@@ -193,7 +193,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-10 col-sm-offset-3">
-                                <input id="submit" name="submit" type="submit" value="Kirim Pengaduan"
+                                <input id="submit" name="submit" type="submit" value="Kirim Tanggapan"
                                     class="btn btn-primary">
                             </div>
                         </div>

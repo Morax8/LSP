@@ -11,7 +11,7 @@
                     <th>id Pengaduan</th>
                     <th>Isi</th>
                     <th>Tanggal</th>
-                    <th>isi</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
